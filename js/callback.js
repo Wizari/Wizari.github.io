@@ -25,7 +25,10 @@ $(document).ready(function () {
 
         event.preventDefault();
 
+        var name = $('#nameForm').val();
+        var email = $('#emailForm').val();
         var tel = $('#telForm').val();
+        var message = $('#message').val();
 
         $('#backPhone').fadeOut(500, function () {
 
@@ -35,7 +38,7 @@ $(document).ready(function () {
 
                     type: 'POST',
                     url: 'srv.php',
-                    data: 'tel=' + tel,
+                    data: {'tel': tel, 'name': name, 'email': email, 'message': message},
                     dataType: 'json',
                     success: function (json) {
                         if (json.error) {
