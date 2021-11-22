@@ -256,17 +256,6 @@
     </div>
 </section>
 
-<!--<div class="window_wrap">-->
-<!--    <div class="window">-->
-<!--        <div class="window_close">X</div>-->
-<!--        <p>Оставте ваш телефонный номер<br/>и мы свяжемся с вами</p>-->
-<!--        <form id="backPhone" name="backPhone" action="">-->
-<!--            <input name="telephone" type="Tel" id="telForm" maxlength="20" placeholder="Телефонный номер"/>-->
-<!--            <button id="telButton" type="submit" form="backPhone">Отправить</button>-->
-<!--        </form>-->
-<!--    </div>-->
-<!--</div>-->
-
 <div class="telButton anim">
     <div class="telButton_border"></div>
     <div class="telButton_background"><span></span></div>
@@ -275,80 +264,77 @@
 
 <section class="page-section" id="1contact" style="padding: 0">
 
-<div class="window_wrap">
-<!--        <div class="window">-->
+    <div class="window_wrap">
 
-    <div class="window row gx-4 gx-lg-5 justify-content-center mb-5">
-<!--        <div class="col-lg-6">-->
-        <div>
-                    <p>Оставте ваши контактные данные<br/>и мы свяжемся с вами</p>
-<!--            <form id="contactForm">-->
-            <form id="backPhone">
-                <!-- Name input-->
-                <div class="form-floating mb-3" id="nameDiv">
-<!--                    <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />-->
-                    <input class="form-control" id="nameForm" type="text" maxlength="50" placeholder="Enter your name..."/>
-                    <label for="nameForm">Name</label>
-<!--                    <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>-->
-                </div>
-                <!-- Email address input-->
-                <div class="form-floating mb-3">
-<!--                    <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />-->
-                    <input class="form-control" id="emailForm" type="email" maxlength="40" placeholder="name@example.com"/>
-                    <label for="emailForm">Email address</label>
-<!--                    <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>-->
-<!--                    <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>-->
-                </div>
-                <!-- Phone number input-->
-                <div class="form-floating mb-3">
-                    <input class="form-control" id="telForm" type="Tel1" maxlength="20" placeholder="(123) 777-7777"/>
-                    <label for="telForm">Phone number</label>
-<!--                    <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>-->
-                </div>
-                <!-- Message input-->
-                <div class="form-floating mb-3">
-<!--                    <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>-->
-                    <textarea class="form-control" id="message" type="text" maxlength="1000" placeholder="Enter your message here..." style="height: 10rem"></textarea>
-                    <label for="message">Message</label>
-<!--                    <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>-->
-                </div>
-                <!-- Submit success message-->
-                <!---->
-                <!-- This is what your users will see when the form-->
-                <!-- has successfully submitted-->
-                <div class="d-none" id="submitSuccessMessage">
-                    <div class="text-center mb-3">
-                        <div class="fw-bolder">Form submission successful!</div>
-                        To activate this form, sign up at
-                        <br />
-                        <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+        <div class="window row gx-4 gx-lg-5 justify-content-center mb-5">
+            <div>
+                <p>Оставте ваши контактные данные<br/>и мы свяжемся с вами</p>
+                <form id="backPhone">
+                    <!-- Name input-->
+                    <p class="w-form-element-label">Как к вам обращаться:</p>
+                    <div class="form-floating mb-3" id="nameDiv">
+                        <!--                                            <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />-->
+                        <input class="form-control" id="nameForm" type="text" maxlength="50"
+                               placeholder="Enter your name..."/>
+                        <label for="nameForm" style="color: #6c757d">Имя</label>
+                        <!--                    <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>-->
                     </div>
-                </div>
-                <!-- Submit error message-->
-                <!---->
-                <!-- This is what your users will see when there is-->
-                <!-- an error submitting the form-->
-                <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                <!-- Submit Button-->
-<!--                <button id="telButton" type="submit" form="backPhone">Отправить</button>-->
-<!--                <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">Submit</button></div>-->
-                <div class="d-grid"><button class="btn btn-primary btn-xl" id="telButton" type="submit">Submit</button></div>
+                    <!-- Email address input-->
+                    <p class="w-form-element-label">Контактные данные:</p>
+                    <div class="form-floating mb-3">
+                        <!--                    <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />-->
+                        <input class="form-control" id="emailForm" type="email" maxlength="40"
+                               placeholder="name@example.com"/>
+                        <label for="emailForm" style="color: #6c757d">Email / Телефон</label>
+<!--                        <div class="invalid-feedback d-block" data-sb-feedback="email:required">An email is required.-->
+<!--                        </div>-->
 
 
-            </form>
-
-<!--            <div style="padding-top: 20px">-->
-<!--                <p id="backPhone" name="backPhone">Оставте ваши контактные данные</p>-->
-<!--            </div>-->
-
+                    </div>
+                    <!-- Phone number input-->
+                    <!--                <div class="form-floating mb-3">-->
+                    <!--                    <input class="form-control" id="telForm" type="Tel1" maxlength="20" placeholder="(123) 777-7777"/>-->
+                    <!--                    <label for="telForm">Phone number</label>-->
+                    <!--&lt;!&ndash;                    <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>&ndash;&gt;-->
+                    <!--                </div>-->
+                    <!-- Message input-->
+                    <p class="w-form-element-label">Сообщение для нас:</p>
+                    <div class="form-floating mb-3">
+                        <!--                    <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>-->
+                        <textarea class="form-control" id="message" type="text" maxlength="1000"
+                                  placeholder="Enter your message here..." style="height: 10rem"></textarea>
+                        <label for="message" style="color: #6c757d">Сообщение</label>
+                        <!--                    <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>-->
+                    </div>
+                    <!-- Submit success message-->
+                    <!---->
+                    <!-- This is what your users will see when the form-->
+                    <!-- has successfully submitted-->
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center mb-3">
+                            <div class="fw-bolder">Form submission successful!</div>
+                            To activate this form, sign up at
+                            <br/>
+                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                        </div>
+                    </div>
+                    <!-- Submit error message-->
+                    <!---->
+                    <!-- This is what your users will see when there is-->
+                    <!-- an error submitting the form-->
+                    <div class="d-none" id="submitErrorMessage">
+                        <div class="text-center text-danger mb-3">Error sending message!</div>
+                    </div>
+                    <!-- Submit Button-->
+                    <!--                <button id="telButton" type="submit" form="backPhone">Отправить</button>-->
+                    <!--                <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">Submit</button></div>-->
+                    <div class="d-grid">
+                        <button class="btn btn-primary btn-xl" id="telButton" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-<!--    </div>-->
-
-
-
-</div>
-
 </section>
 
 <!-- Footer-->
@@ -375,8 +361,11 @@
 <script src="js/scripts.js"></script>
 <script src="js/map.js"></script>
 <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+<!--<script async defer-->
+<!--        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBe2y1lZAAKeInviJZR4E7xHRvl1FIijZw&callback=initMap&libraries=&v=weekly"-->
+<!--&gt;</script>-->
 <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBe2y1lZAAKeInviJZR4E7xHRvl1FIijZw&callback=initMap&libraries=&v=weekly"
+        src="https://maps.googleapis.com/maps/api/js?&callback=initMap&libraries=&v=weekly"
 ></script>
 </body>
 </html>

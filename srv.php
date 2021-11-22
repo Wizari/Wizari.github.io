@@ -10,8 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $res = array();
 
-    if (empty($tel)) {
-        $res['error'] = "Нужно добавить номер телефона!";
+    if (empty($email)) {
+        $res['error'] = "Пожалуйста добавьте контактные данные";
         echo json_encode($res);
         exit();
     }
@@ -25,13 +25,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         ->setFrom(['Fromn@gmail.com' => 'Склад']) //<-------- set
         ->setTo(['To@gmail.com' => 'A name'])     //<-------- set
         ->setBody('Имя: ' . $name .
-            "\n" . 'Почта: ' . $email .
-            "\n" . 'Телефон: ' . $tel .
+            "\n" . 'Контактные данные: ' . $email .
             "\n" . 'Сообщение: ' . $mes);
 
     $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
-        ->setUsername('')                          //<-------- set
-        ->setPassword('');                         //<-------- set
+        ->setUsername('Fromn@gmail.com')                          //<-------- set
+        ->setPassword('pass');                         //<-------- set
+
     $mailer = new Swift_Mailer($transport);
 
     $result = $mailer->send($message);
